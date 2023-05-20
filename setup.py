@@ -31,6 +31,6 @@ except AssertionError:
     install("pandas")
 
 if len(installed) > 0:
-    [print("Package %s was missing and successfully installed", p) for p in installed]
+    [print("Package %s was missing and successfully installed" % p) for p in installed]
 else:
     print("All modules correctly installed")
