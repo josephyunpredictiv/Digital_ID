@@ -12,25 +12,25 @@ def install(package):
 
 try:
     assert check_exists("cv2") is not None
-except ImportError:
+except AssertionError:
     install("opencv-python")
 
 try:
     assert check_exists("PIL") is not None
-except ImportError:
+except AssertionError:
     install("Pillow")
 
 try:
     assert check_exists("numpy") is not None
-except ImportError:
+except AssertionError:
     install("numpy")
 
 try:
     assert check_exists("pandas") is not None
-except ImportError:
+except AssertionError:
     install("pandas")
 
-if installed is not None:
-    [print("Package %s successfully installed", p) for p in installed]
+if len(installed) > 0:
+    [print("Package %s was missing and successfully installed", p) for p in installed]
 else:
     print("All modules correctly installed")
