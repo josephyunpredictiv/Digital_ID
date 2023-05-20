@@ -5,6 +5,12 @@ Joseph Yun
 
 ## Usage:
 
+Simply run the following command:
+
+```git clone https://github.com/josephyunpredictiv/digital_ID```
+
+and all scripts in this repository will automatically download to your computer, allowing you to use them.
+
 Main purpose of this script is to generate cryptogrpaphic hashes from raw images.
 After encryption, these hashes *cannot* be used to return the original image.
 
