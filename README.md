@@ -1,7 +1,7 @@
 # digital_ID
 
 ## Authors:
-Joseph Yun
+Joseph Yun, Ben Song
 
 ## Usage:
 
