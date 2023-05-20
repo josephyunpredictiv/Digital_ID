@@ -1,5 +1,5 @@
 import sys
-import encode
+from encode import *
 import cv2
 
 if __name__ == '__main__':
@@ -9,4 +9,4 @@ if __name__ == '__main__':
     print(byteEncodedDigitalObject)
 
     digital_ID, byteEncodedDigitalID = modelv2(byteEncodedDigitalObject)
-    QR(digital_ID)
+    QR(digital_ID).save(sys.argv[2])

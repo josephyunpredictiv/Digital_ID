@@ -12,6 +12,10 @@ import qrcode
 import pandas as pd
 import time
 
+def QR(string):
+  qrCode = qrcode.make(string)
+  return qrCode
+
 def hashEncode(byteString):
   h = hashlib.new('sha256')
   h.update(byteString)
