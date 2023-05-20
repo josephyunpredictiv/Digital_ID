@@ -37,22 +37,14 @@ def imgToByte(image, fileType):
 def modelv2(byteEncodedDigitalObject):
   
   #step 1 byte encode timestamp
-  print("")
   timeStamp=timestamp()
   byteEncodedTimestamp=timeStamp.encode()
-  print("timestamp: " + str(timeStamp))
-  print("byteEncodedTimestamp: " + str(byteEncodedTimestamp))
-  print("byteEncodedDigitalObject: " + str(byteEncodedDigitalObject))
 
   #step 2 timestamp+byteEncodedDO
-  print("")
   byteEncodedDigitalID=byteEncodedTimestamp+byteEncodedDigitalObject
-  print("byteEncodedDigitalID: " + str(byteEncodedDigitalID))
 
   #step 3 hash byteEncodedDigitalID
-  print("")
   hashEncodedDigitalID=hashEncode(byteEncodedDigitalID)
-  print("hashEncodedDigitalID: " + str(hashEncodedDigitalID))
   
   #output
   return hashEncodedDigitalID, byteEncodedDigitalID
